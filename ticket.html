@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ticket Booking System</title>
+  <link rel="stylesheet" href="ticket.css" />
+</head>
+<body>
+  <div>
+    <div class="wave"></div>
+    <div class="wave"></div>
+    <div class="wave"></div>
+  </div>
+
+  <header>Ticket Booking System</header>
+
+  <div class="search-container">
+    <h2>Book Your Journey</h2>
+    <div class="search-form">
+      <select id="departure">
+        <option>From</option>
+        <option>Paris</option>
+        <option>London</option>
+        <option>Berlin</option>
+      </select>
+      <select id="arrival">
+        <option>To</option>
+        <option>Berlin</option>
+        <option>Tokyo</option>
+        <option>Rome</option>
+      </select>
+      <input type="date" id="date" />
+      <input type="number" id="passengers" placeholder="Passengers" min="1" />
+      <button id="search">Search</button>
+    </div>
+  </div>
+
+  <div class="video-container">
+    <video autoplay loop muted playsinline>
+      <source src="airplan.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <script src="ticket.js"></script>
+</body>
+</html>

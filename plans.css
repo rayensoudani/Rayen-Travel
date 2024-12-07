@@ -1,0 +1,134 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body,
+  html {
+    height: 100%;
+  }
+  
+  .animated-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url('travel.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-animation: slidein 100s linear infinite alternate;
+    animation: slidein 50s linear infinite alternate;
+  }
+  
+  @keyframes slidein {
+    from {
+      background-position: top;
+      background-size: 3000px;
+    }
+    to {
+      background-position: -100px 0px;
+      background-size: 2750px;
+    }
+  }
+  
+  .center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(75, 75, 250, 0.3);
+    border-radius: 10px;
+  }
+  
+  .center h1 {
+    text-align: center;
+    color: white;
+    font-family: 'Source Code Pro', monospace;
+    text-transform: uppercase;
+    font-size: 2.8rem;
+    padding: 20px;
+  }
+  
+  .countries-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 40px;
+    gap: 20px;
+  }
+  
+  .country-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .country {
+    width: 350px;
+    height: 350px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: floatUp 5s ease-in-out infinite alternate;
+  }
+  
+  .country-name {
+    margin-top: 10px;
+    color: white;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  
+  .country-container:hover .country {
+    transform: scale(1.1) translateY(-5px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.7);
+  }
+  
+  .country-container:hover .country-name {
+    opacity: 1;
+    transform: translateY(-5px);
+  }
+  
+  @keyframes floatUp {
+    0% {
+      transform: translateY(0);
+      box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.6);
+    }
+    100% {
+      transform: translateY(-10px);
+      box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.8);
+    }
+  }
+  .country-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    text-decoration: none; 
+    color: white;
+    border-radius: 10px;
+    width: 250px;
+    height: 250px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .country-container:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.7);
+  }
+  

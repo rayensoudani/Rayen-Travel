@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="login.css">
+  <title>Login Page</title>
+</head>
+<body>
+  <div class="gradient"></div>
+  
+  <div class="form-container">
+    <form class="login-form">
+      <h2>Login</h2>
+      <input type="text" placeholder="Username" required>
+      <input type="password" placeholder="Password" required>
+      <button type="submit">Log In</button>
+      <p class="create-account">Don't have an account? <a href="crt.html">Create Account</a></p>
+    </form>
+  </div>
+
+  <script>
+    const gradient = document.querySelector(".gradient");
+
+    function onMouseMove(event) {
+      gradient.style.backgroundImage = 
+        `radial-gradient(at ${event.clientX}px ${event.clientY}px, rgba(250,250,250,.6) 0, #000000 70%)`;
+    }
+
+    document.addEventListener("mousemove", onMouseMove);
+  </script>
+</body>
+</html>

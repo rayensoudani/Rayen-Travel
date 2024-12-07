@@ -1,0 +1,114 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+html,
+body {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+  
+body {
+    background-image: url('air.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+
+.gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: radial-gradient(at 300px 300px, rgba(0, 0, 0, 0.7) 0, rgba(0, 0, 0, 0) 70%);
+    pointer-events: none;
+    transition: background-image 0.1s ease-out;
+}
+
+.form-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.signup-form {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    width: 350px;
+}
+
+.signup-form h2 {
+    margin-bottom: 15px;
+    font-size: 1.7rem;
+}
+
+.signup-form input {
+    margin: 8px 0;
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: box-shadow 0.2s ease;
+}
+
+.signup-form input:focus {
+    outline: none;
+    box-shadow: 0 0 8px rgba(159, 0, 191, 0.7);
+}
+
+.signup-form button {
+    background-color: #4D4FA7;
+    border: none;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.signup-form button:hover {
+    background-color: #7a7ee0;
+}
+
+.already-account {
+    font-size: 0.9rem;
+    margin-top: 10px;
+    color: #333;
+}
+
+.already-account a {
+    text-decoration: none;
+    color: #4D4FA7;
+    transition: color 0.2s ease;
+}
+
+.already-account a:hover {
+    color: #7a7ee0;
+}
+
+.signup-form:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
